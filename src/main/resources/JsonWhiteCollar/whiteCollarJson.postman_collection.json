@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "9d7fae03-3207-4525-b2f0-4c4843b58211",
+		"name": "whiteCollarJson",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "shopsCreate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nameShop\": \"LOUVRE\",\r\n        \"maxCapacityShop\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/shops",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shopsList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/shops",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paintingsListByShopByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/shops/6/paintings",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shops",
+						"6",
+						"paintings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "paintingsCreateByShop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{       \r\n        \"author\": {\r\n            \"idAuthor\": 5\r\n        },       \r\n        \"name_painting\": \"Hombre de Vitruvio\",\r\n        \"price_painting\": 15005000.0,      \r\n        \"shop\": {\r\n            \"idShop\": 6\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/shops/6/paintings",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shops",
+						"6",
+						"paintings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shopDelete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/v1/shops/6/paintings",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"shops",
+						"6",
+						"paintings"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
